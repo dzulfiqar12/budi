@@ -8,5 +8,13 @@
   </head>
   <body>
     Hello World budi
+    <div id="budi"></div>
+    <script>
+      fetch("https://dummyjson.com/products/1")
+        .then((res) => res.json())
+        .then(
+          (json) => (document.getElementById("budi").innerHTML = json.title)
+        );
+    </script>
   </body>
 </html>
